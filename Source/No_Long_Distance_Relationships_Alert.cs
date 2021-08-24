@@ -62,7 +62,7 @@ namespace Fixable_Mood_Debuffs_Alert
                 List<Thought> outThoughts = new List<Thought>();
                 p.needs.mood.thoughts.GetAllMoodThoughts(outThoughts);
                 return outThoughts.Any(thought =>
-                    thought.def.thoughtClass == typeof(Thought_WantToSleepWithSpouseOrLover));
+                    thought.LabelCap == "Sleeping alone");
             });
         }
     }
